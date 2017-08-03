@@ -15,6 +15,13 @@ y = np.array([-1, -1, 1, 1, 1])
 
 # plot these examples on a 2D graph
 for d, sample in enumerate(X):
-    # plot negative samples
+    # plot negative samples (d = 0, 1)
     if d < 2:
-        plt.scatter(sample[0], sample[1], s=120, marker='_', linewidths=)
+        plt.scatter(sample[0], sample[1], s=120, marker='_', linewidths=2)
+    # plot positive samples (d = 2,3,4)
+    else:
+        plt.scatter(sample[0], sample[1], s=120, marker='+', linewidths=2)
+
+# print a possible hyperplane, that is seperating the two classes. (this is a naive guess)
+plt.plot([-2, 6], [6, 0.5])
+
